@@ -1,5 +1,6 @@
 ﻿using TechJobsPersistent.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace TechJobsPersistent.Data
 {
@@ -9,6 +10,8 @@ namespace TechJobsPersistent.Data
         public DbSet<Employer> Employers { get; set; }
         public DbSet<Skill> Skills { get; set; }
         public DbSet<JobSkill> JobSkills { get; set; }
+
+        //public DbSet<List<Skill>> SkillsList { get; set; }
 
         public JobDbContext(DbContextOptions<JobDbContext> options)
             : base(options)
